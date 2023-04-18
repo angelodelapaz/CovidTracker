@@ -1,10 +1,3 @@
-<%-- 
-    Document   : profile
-    Created on : 04 14, 23, 6:10:35 PM
-    Author     : levinjacob
---%>
-
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -18,7 +11,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@700&family=Lexend+Deca&display=swap" rel="stylesheet">
     </head>
-        <title>JSP Page</title>
+        <title>Profile Page</title>
     </head>
     <body>
          <header>
@@ -33,22 +26,48 @@
                 </ul> 
             </nav>
             <main>
-                <div class="profile">
                     <div class="profilepic">
                         <img src="https://www.w3schools.com/howto/img_avatar.png" alt="profile picture">
-                    </div>
-                    <div class="profileinfo">
-                        <h1>Profile Information</h1>
-                        <p>First Name: ${requestScope.user.firstName}</p> 
-                        <p>Last Name: ${requestScope.user.lastName}</p>
-                        <p>Email: ${requestScope.user.email}</p>
-                        <p>Phone Number: ${requestScope.user.phoneNumber}</p>
-                        <p>Address: ${requestScope.user.address}</p>
-                        <p>Birthday: </P>
-                        <p>Gender: </P>
-                        <p>Status: </P>
-                    </div>
-                </div>
+                    </div>   
+                <!-- Main -->
+    <div class="main">
+        <h2>Personal Information</h2>
+        <div class="card">
+            <div class="card-body">
+                <i class="fa fa-pen fa-xs edit"></i>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Name</td>
+                            <td>:</td>
+                            <td>Insert Scriplet</td>
+                        </tr>
+                        <tr>
+                            <td>Email</td>
+                            <td>:</td>
+                            <td>Insert Scriplet</td>
+                        </tr>
+                        <tr>
+                            <td>Address</td>
+                            <td>:</td>
+                            <td>Insert Scriplet</td>
+                        </tr>
+                        <tr>
+                            <td>Birthday</td>
+                            <td>:</td>
+                            <td>Insert Scriplet</td>
+                        </tr>
+                        <tr>
+                            <td>Occupation</td>
+                            <td>:</td>
+                            <td>Insert Scriplet</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- End -->
             </main>
     </body>
 </html>
