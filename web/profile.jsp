@@ -12,7 +12,7 @@
         <meta http-equiv="Content-Type" content="img/jpeg; charset=UTF-8">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-         <link rel="stylesheet" href="indexstyles.css">
+         <link rel="stylesheet" href="profilestyles.css">
         <title>JSP Page</title>
     </head>
     <body>
@@ -33,10 +33,13 @@
                 </div>
                 <div class="profileinfo">
                     <h1>Profile Information</h1>
-                    <p>First Name: ${requestScope.user.firstName}</p>
+                    <p>First Name: ${requestScope.user.firstName}</p> 
                     <p>Last Name: ${requestScope.user.lastName}</p>
                     <p>Email: ${requestScope.user.email}</p>
                     <p>Phone Number: ${requestScope.user.phoneNumber}</p>
                     <p>Address: ${requestScope.user.address}</p>
+                    <p>Birthday: </P>
+                    <p>Gender: </P>
+                    <p>Status: </P>
     </body>
 </html>
