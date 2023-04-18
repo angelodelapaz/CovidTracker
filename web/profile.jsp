@@ -12,7 +12,12 @@
         <meta http-equiv="Content-Type" content="img/jpeg; charset=UTF-8">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-         <link rel="stylesheet" href="profilestyles.css">
+        <link rel="stylesheet" href="profilestyles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@700&family=Lexend+Deca&display=swap" rel="stylesheet">
+    </head>
         <title>JSP Page</title>
     </head>
     <body>
@@ -27,19 +32,23 @@
                     <li><a href="${pageContext.request.contextPath}/AboutServlet" class="navlink">About</a></li>
                 </ul> 
             </nav>
-            <<main>
-                <div class="profilepic">
-                    <img src="https://www.w3schools.com/howto/img_avatar.png" alt="profile picture">
+            <main>
+                <div class="profile">
+                    <div class="profilepic">
+                        <img src="https://www.w3schools.com/howto/img_avatar.png" alt="profile picture">
+                    </div>
+                    <div class="profileinfo">
+                        <h1>Profile Information</h1>
+                        <p>First Name: ${requestScope.user.firstName}</p> 
+                        <p>Last Name: ${requestScope.user.lastName}</p>
+                        <p>Email: ${requestScope.user.email}</p>
+                        <p>Phone Number: ${requestScope.user.phoneNumber}</p>
+                        <p>Address: ${requestScope.user.address}</p>
+                        <p>Birthday: </P>
+                        <p>Gender: </P>
+                        <p>Status: </P>
+                    </div>
                 </div>
-                <div class="profileinfo">
-                    <h1>Profile Information</h1>
-                    <p>First Name: ${requestScope.user.firstName}</p> 
-                    <p>Last Name: ${requestScope.user.lastName}</p>
-                    <p>Email: ${requestScope.user.email}</p>
-                    <p>Phone Number: ${requestScope.user.phoneNumber}</p>
-                    <p>Address: ${requestScope.user.address}</p>
-                    <p>Birthday: </P>
-                    <p>Gender: </P>
-                    <p>Status: </P>
+            </main>
     </body>
 </html>
