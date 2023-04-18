@@ -12,14 +12,18 @@
         <meta http-equiv="Content-Type" content="img/jpeg; charset=UTF-8">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-         <link rel="stylesheet" href="profilestyles.css">
-        <title>JSP Page</title>
+        <link rel="stylesheet" href="profilestylestest.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@700&family=Lexend+Deca&display=swap" rel="stylesheet">
+        <title>Profile Page</title>
     </head>
     <body>
          <header>
             <nav class="navbar"> 
                 <header>
-                    <h1>Subdivision COVID-19 Tracker</h1>
+                    <h1>Covid-19 Tracker</h1>
                 </header>
                 <ul name="navigation" class="navlist">
                     <li><a href="${pageContext.request.contextPath}/homepage.jsp" class="navlink">Profile</a></li>
@@ -27,7 +31,8 @@
                     <li><a href="${pageContext.request.contextPath}/AboutServlet" class="navlink">About</a></li>
                 </ul> 
             </nav>
-            <<main>
+            </header>
+            <main>
                 <div class="profilepic">
                     <img src="https://www.w3schools.com/howto/img_avatar.png" alt="profile picture">
                 </div>
@@ -41,5 +46,8 @@
                     <p>Birthday: </P>
                     <p>Gender: </P>
                     <p>Status: </P>
+                </div>
+                <h1 class="bg-red-200">Subdivision COVID-19 Tracker</h1>
+            </main>
     </body>
 </html>
