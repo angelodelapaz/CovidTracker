@@ -5,7 +5,7 @@
         <meta http-equiv="Content-Type" content="img/jpeg; charset=UTF-8">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="profilestyles.css">
+        <link rel="stylesheet" href="styles/profilestyles.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,12 +17,12 @@
          <header>
             <nav class="navbar"> 
                 <header>
-                    <h1>Subdivision COVID-19 Tracker</h1>
+                    <h1>COVID-19 Tracker</h1>
                 </header>
                 <ul name="navigation" class="navlist">
-                    <li><a href="${pageContext.request.contextPath}/homepage.jsp" class="navlink">Profile</a></li>
-                    <li><a href="${pageContext.request.contextPath}/menu.jsp" class="navlink">Menu</a></li>
-                    <li><a href="${pageContext.request.contextPath}/AboutServlet" class="navlink">About</a></li>
+                    <li><a href="${pageContext.request.contextPath}/index.jsp" class="navlink">Home</a></li>
+                    <li><a href="${pageContext.request.contextPath}/menu.jsp" class="navlink">Health Declaration</a></li>
+                    <li><a href="${pageContext.request.contextPath}/profile.jsp" class="navlink">Profile</a></li>
                 </ul> 
             </nav>
             <main>
