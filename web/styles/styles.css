@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Monsterrat', sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root {
+    -bg-color: #ffffff;
+    -text-color: #121212;
+    -main-font: 2.2rem;
+    -p-font: 1.1rem;
+}
+
+.navbar {
+    overflow: hidden;
+}
+
+.navbar-right {
+    float: right;
+}
+
+.navbar a{
+    font-size: 1.1rem;
+    color: #121212;
+    font-weight: 600;
+    padding: 14px 16px;
+}
+
+.navbar a:hover {
+    background-color: #eebf27 ;
+    color: #434343;
+}
+
+.profile-container {
+	height: 100%;
+	margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+	justify-content: center;
+}
+
+.profile-label {
+	text-align: left;
+	padding-top: 50px;
+	width: 80%;
+	margin: 0px auto 10px auto;
+	border-bottom: 4px solid #1b1b32;
+}
