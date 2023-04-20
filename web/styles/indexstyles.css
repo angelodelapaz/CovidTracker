@@ -1,0 +1,120 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, sans-serif;
+    background: linear-gradient(180deg, #101010,#252422);
+    height: 100vh;
+    overflow: hidden;
+}
+.center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 400px;
+    background: white;
+    border-radius: 10px;
+}
+.center h1{
+    text-align: center;
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid silver;
+}
+.center form{
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+form .txt_field{
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin: 30px 0;
+}
+.txt_field input{
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+}
+.txt_field label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #adadad;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s;
+}
+.txt_field span::before{
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #eb5e38;
+    transition: .5s;
+}
+.txt_field input:focus ~ label,
+.txt_field input:valid ~ label{
+    top: -5px;
+    color: #eb5e28;
+}
+.txt_field input:focus ~ span::before,
+.txt_field input:valid ~ span::before{
+    width: 100%;
+}
+.center h3{
+    font-size: 16px;
+    text-align: center;
+    margin: 10px;
+}
+
+.login, .guest{
+    width: 100%;
+    height: 40px;
+    border: 1px solid;
+    border-radius: 18px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    outline: none;
+}
+.login{
+    background: #eb5e28;
+    color:white;
+}
+.guest{
+    background: #b5aa99;
+    color: white;
+    margin: 0 0 20px 0;
+}
+.login:hover,.guest:hover{
+    border-color: #eb5e28;
+    transition: .5s;
+}
+.login:hover,.guest:hover{
+    background: white;
+    border-color: #eb5e28;
+    transition: .5s;
+}
+.guest:hover{
+    color: #eb5e28;
+}
+.signup{
+    margin: 0 0 20px 0;
+    text-align: center;
+    font-size: 16px;
+    color: #666666;
+}
+.signup a{
+    color: #eb5e28;
+    text-decoration: none;
+}
+.signup a:hover{
+    text-decoration: underline;
+}
