@@ -1,10 +1,4 @@
-<%-- 
-    Document   : profile_1
-    Created on : 04 19, 23, 7:58:07 PM
-    Author     : levinjacob
---%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -18,69 +12,63 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@700&family=Lexend+Deca&display=swap" rel="stylesheet">
     </head>
-        <title>Profile Page</title>
-    </head>
-    <body>
-         <header>
-            <nav class="navbar"> 
-                <header>
-                    <h1>COVID-19 Tracker</h1>
-                </header>
-                <ul name="navigation" class="navlist">
-                    <li><a href="${pageContext.request.contextPath}/index.jsp" class="navlink">Home</a></li>
-                    <li><a href="${pageContext.request.contextPath}/menu.jsp" class="navlink">Health Declaration</a></li>
-                    <li><a href="${pageContext.request.contextPath}/profile.jsp" class="navlink">Profile</a></li>
-                </ul> 
-            </nav>
-            <main>
-                    <div class="profilepic">
-                        <img src="https://www.w3schools.com/howto/img_avatar.png" alt="profile picture">
-                    </div>   
-                <!-- Main -->
-    <div class="main">
-        <h2>Personal Information</h2>
-        <div class="card">
-            <div class="card-body">
-                <i class="fa fa-pen fa-xs edit"></i>
-                <table>
-                    <tbody>
-                        <tr>
-                            <td>Name</td>
-                            <td>:</td>
-                            <td>Insert Scriplet</td>
-                        </tr>
-                        <tr>
-                            <td>Email</td>
-                            <td>:</td>
-                            <td>Insert Scriplet</td>
-                        </tr>
-                        <tr>
-                            <td>Address</td>
-                            <td>:</td>
-                            <td>Insert Scriplet</td>
-                        </tr>
-                        <tr>
-                            <td>Birthday</td>
-                            <td>:</td>
-                            <td>Insert Scriplet</td>
-                        </tr>
-                        <tr>
-                            <td>Occupation</td>
-                            <td>:</td>
-                            <td>Insert Scriplet</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </header>
-
-        <main>
-            <section class="profile-container">
-                <div class="profile-label">
-                    <h2>USER PROFILE</h2>
+    <title>Profile Page</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar"> 
+            <header>
+                <h1>COVID-19 Tracker</h1>
+            </header>
+            <ul name="navigation" class="navlist">
+                <li><a href="${pageContext.request.contextPath}/index.jsp" class="navlink">Home</a></li>
+                <li><a href="${pageContext.request.contextPath}/menu.jsp" class="navlink">Health Declaration</a></li>
+                <li><a href="${pageContext.request.contextPath}/profile.jsp" class="navlink">Profile</a></li>
+            </ul> 
+        </nav>
+    </header>
+    <main>
+        <div class="profilepic">
+            <img src="https://www.w3schools.com/howto/img_avatar.png" alt="profile picture">
+        </div>   
+        <!-- Main -->
+        <div class="main">
+            <h2>Personal Information</h2>
+            <div class="card">
+                <div class="card-body">
+                    <i class="fa fa-pen fa-xs edit"></i>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>Name</td>
+                                <td>:</td>
+                                <td>Insert Scriplet</td>
+                            </tr>
+                            <tr>
+                                <td>Email</td>
+                                <td>:</td>
+                                <td>Insert Scriplet</td>
+                            </tr>
+                            <tr>
+                                <td>Address</td>
+                                <td>:</td>
+                                <td>Insert Scriplet</td>
+                            </tr>
+                            <tr>
+                                <td>Birthday</td>
+                                <td>:</td>
+                                <td>Insert Scriplet</td>
+                            </tr>
+                            <tr>
+                                <td>Occupation</td>
+                                <td>:</td>
+                                <td>Insert Scriplet</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-                <!-- display info from data from database -->
-            </section>
-        </main>
-    </body>
+            </div>
+        </div>
+    </main>
+</body>
 </html>
