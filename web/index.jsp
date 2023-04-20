@@ -25,14 +25,8 @@
                     <label>Password</label>
                 </div>
                 <input type="submit" class="login" value="Login">
-                <h3>or</h3>
             </form>
-            <form action="productPage.jsp" method="post">
-                <input type="submit" class="guest" value="Continue as Guest">
-            </form>
-            <div class="signup">
-                Don't have an account? <a href="#">Sign Up</a>
-            </div>
+            <br>
         </div>
     </body>
 </html>
