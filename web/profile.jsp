@@ -27,7 +27,9 @@
             </ul> 
         </nav>
     </header>
+    <center>
     <main>
+        
         <div class="profilepic">
             <img src="https://www.w3schools.com/howto/img_avatar.png" alt="profile picture">
         </div>   
@@ -69,6 +71,7 @@
                 </div>
             </div>
         </div>
+        </center>
     </main>
 </body>
 </html>
