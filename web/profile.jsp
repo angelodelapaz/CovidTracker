@@ -1,3 +1,10 @@
+<%-- 
+    Document   : profile_1
+    Created on : 04 19, 23, 7:58:07 PM
+    Author     : levinjacob
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -65,9 +72,15 @@
                     </tbody>
                 </table>
             </div>
-        </div>
-    </div>
-    <!-- End -->
-            </main>
+        </header>
+
+        <main>
+            <section class="profile-container">
+                <div class="profile-label">
+                    <h2>USER PROFILE</h2>
+                </div>
+                <!-- display info from data from database -->
+            </section>
+        </main>
     </body>
 </html>
