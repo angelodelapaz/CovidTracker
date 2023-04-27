@@ -11,14 +11,14 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Error 404</title>
-        <link rel="stylesheet" href="/styles/error404styles.css">
+        <link rel="stylesheet" href="styles/error404styles.css">
     </head>
     <body>
         <div class="container">
             <h2>Oops! <span>Page not found.</span></h2>
             <h1>404</h1>
             <p>We can't find the page you're looking for.</p>
-            <a href="#">Return home</a>
+            <a href="#">Return</a>
         </div>
     </body>
 </html>

@@ -26,24 +26,26 @@ body{
     margin: 0;
     font-weight: 900;
     letter-spacing: 20px;
-    background: url(https://www.shutterstock.com/image-vector/modern-interior-bright-colours-workplace-260nw-1721500999.jpg) center no-repeat;
+    background: url(https://t3.ftcdn.net/jpg/03/33/64/68/360_F_333646848_wJygH6TRBSmddVpQ5JTKTufJMYUpdhBQ.jpg) center no-repeat;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
 }
 .container a{
     text-decoration: none;
-    background: #b5aa99;
+    background: green;
     color: #fff;
     padding: 12px 24px;
     display: inline-block;
-    border-radius: 18px;
+    border-radius: 12px;
     font-size: 14px;
     text-transform: uppercase;
     transition: 0.4;
 }
 .container a:hover{
-    background: #eb5e28;
+    background: black;
+    color: lightgreen;
+    transition: 0.5s;
 }
 span{
-    color:#eb5e28;
+    color:green;
 }
