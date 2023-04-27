@@ -4,7 +4,11 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/aldri/Documents/GitHub/CovidTracker/web/index.jsp</file>
+            <file>file:/C:/Users/aldri/Documents/GitHub/CovidTracker/web/styles/error404styles.css</file>
+            <file>file:/C:/Users/aldri/Documents/GitHub/CovidTracker/web/styles/error500styles.css</file>
+            <file>file:/C:/Users/aldri/Documents/GitHub/CovidTracker/web/error404.jsp</file>
             <file>file:/C:/Users/aldri/Documents/GitHub/CovidTracker/web/profile.jsp</file>
+            <file>file:/C:/Users/aldri/Documents/GitHub/CovidTracker/web/error500.jsp</file>
             <file>file:/C:/Users/aldri/Documents/GitHub/CovidTracker/web/styles/indexstyles.css</file>
         </group>
     </open-files>
