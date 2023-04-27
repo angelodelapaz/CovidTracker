@@ -1,0 +1,50 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 04 27, 23, 8:06:54 PM
+    Author     : AldrinLuces
+*/
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    background: linear-gradient(180deg, #101010,#252422);
+    min-height: 100vh;
+}
+.container{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: white;
+}
+.container h1{
+    font-size: 160px;
+    margin: 0;
+    font-weight: 900;
+    letter-spacing: 20px;
+    background: url(https://www.shutterstock.com/image-vector/modern-interior-bright-colours-workplace-260nw-1721500999.jpg) center no-repeat;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+.container a{
+    text-decoration: none;
+    background: #b5aa99;
+    color: #fff;
+    padding: 12px 24px;
+    display: inline-block;
+    border-radius: 18px;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: 0.4;
+}
+.container a:hover{
+    background: #eb5e28;
+}
+span{
+    color:#eb5e28;
+}
+
