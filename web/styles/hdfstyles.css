@@ -1,0 +1,113 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 05 7, 23, 11:06:48 PM
+    Author     : levinjacob
+*/
+
+body{
+    background-color: rgb(9, 141, 42);
+}
+/* Styling for the main container */
+.main-box {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: helvetica;
+    border-radius: 22px;
+    background: #ffffff;
+    box-shadow:  10px 10px 5px 5px #2d2e2d;
+    z-index: 2;
+}
+
+.main-box p{
+    font-weight: bold;
+}
+/* Styling for the top box */
+.top-box {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+/* Styling for the form labels */
+label {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+/* Styling for the radio buttons and their labels */
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+/* Styling for the form inputs */
+input[type="text"],
+input[type="number"],
+input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+/* Styling for the Symptoms section */
+.symptoms {
+    margin-top: 20px;
+}
+
+/* Styling for the Symptoms section labels */
+.symptoms p {
+    font-weight: bold;
+}
+
+/* Styling for the Submit button */
+input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Styling for the Submit button on hover */
+input[type="submit"]:hover {
+    background-color: #555;
+}
+
+.symptoms div label {
+    display: inline-block;
+    width: auto;
+}
+
+.symptoms div input[type="radio"] {
+    display: inline-block;
+    width: auto;
+    margin-right: 10px;
+}
+
+button {
+    font-size: 17px;
+    padding: 0.5em 2em;
+    border: transparent;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+    background: dodgerblue;
+    color: white;
+    border-radius: 4px;
+}
+
+button:hover {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(30,144,255,1) 0%, rgba(0,212,255,1) 100%);
+}
+
+button:active {
+    transform: translate(0em, 0.2em);
+}
