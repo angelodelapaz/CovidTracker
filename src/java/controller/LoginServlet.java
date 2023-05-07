@@ -50,15 +50,15 @@ public class LoginServlet extends HttpServlet {
 
     public boolean checkCorrect(HttpServletRequest request) throws SQLException {
         boolean isCorrect = true;
-        String query = "SELECT * FROM USERS WHERE EMAIL = ? AND PASSWORD = ?";
-        String passw = request.getParameter("pass");
+        String query = "SELECT * FROM covidtracker WHERE Username = ? AND Password = ?";
+        String passw = request.getParameter("password");
         ps = con.prepareStatement(query);
-        ps.setString(1, request.getParameter("email"));
+        ps.setString(1, request.getParameter("username"));
         ps.setString(2, passw);
         ResultSet rs = ps.executeQuery();
         String email = "";
         while (rs.next()) {
-            email = rs.getString("EMAIL").trim();
+            email = rs.getString("Username").trim();
         }
         if (email == null || email.equals("")) {
             isCorrect = false;
@@ -87,16 +87,16 @@ public class LoginServlet extends HttpServlet {
                     if (errorctr == 0) {
                         response.sendRedirect("failedlogin.jsp");
                     } else {
-                        response.sendRedirect("error.jsp");
+                        response.sendRedirect("error404.jsp");
                     }
                 }
                 
                 stmt = con.createStatement();
-                rs = stmt.executeQuery("SELECT * FROM USERS ORDER BY EMAIL");
+                rs = stmt.executeQuery("SELECT * FROM covidtracker ORDER BY Username");
                 request.setAttribute("records", rs);
                 request.getRequestDispatcher("table.jsp").forward(request, response);
             } else {
-                response.sendRedirect("error.jsp");
+                response.sendRedirect("error404.jsp");
             }
 
         } catch (SQLException | IllegalStateException sqle) {
