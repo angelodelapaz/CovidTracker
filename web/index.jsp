@@ -12,7 +12,7 @@
     </head>
     <body>
         <div class="center">
-            <h1>Login ka muna</h1>
+            <h1>Login ka</h1>
             <form action="LoginServlet" method="post">
                 <div class="txt_field">
                     <input type="text" name="username" required>
