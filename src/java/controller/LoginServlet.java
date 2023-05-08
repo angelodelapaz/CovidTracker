@@ -24,7 +24,6 @@ public class LoginServlet extends HttpServlet {
             Class.forName(config.getInitParameter("jdbcClassName"));
             String username = config.getInitParameter("dbUserName");
             String password = config.getInitParameter("dbPassword");
-            //String url = "jdbc:derby://localhost:1527/LoginDB";
             StringBuffer url = new StringBuffer(config.getInitParameter("jdbcDriverURL"))
                             .append("://")
                             .append(config.getInitParameter("dbHostName"))
@@ -50,15 +49,15 @@ public class LoginServlet extends HttpServlet {
 
     public boolean checkCorrect(HttpServletRequest request) throws SQLException {
         boolean isCorrect = true;
-        String query = "SELECT * FROM USERS WHERE EMAIL = ? AND PASSWORD = ?";
-        String passw = request.getParameter("pass");
+        String query = "SELECT * FROM covidtracker WHERE Username = ? AND Password = ?";
+        String passw = request.getParameter("password");
         ps = con.prepareStatement(query);
-        ps.setString(1, request.getParameter("email"));
+        ps.setString(1, request.getParameter("username"));
         ps.setString(2, passw);
         ResultSet rs = ps.executeQuery();
         String email = "";
         while (rs.next()) {
-            email = rs.getString("EMAIL").trim();
+            email = rs.getString("username").trim();
         }
         if (email == null || email.equals("")) {
             isCorrect = false;
@@ -85,18 +84,18 @@ public class LoginServlet extends HttpServlet {
 
                 if (isCorrect != true) {
                     if (errorctr == 0) {
-                        response.sendRedirect("failedlogin.jsp");
+                        response.sendRedirect("error500.jsp");
                     } else {
-                        response.sendRedirect("error.jsp");
+                        response.sendRedirect("error500.jsp");
                     }
                 }
                 
                 stmt = con.createStatement();
-                rs = stmt.executeQuery("SELECT * FROM USERS ORDER BY EMAIL");
+                rs = stmt.executeQuery("SELECT * FROM covidtracker ORDER BY Username");
                 request.setAttribute("records", rs);
-                request.getRequestDispatcher("table.jsp").forward(request, response);
+                request.getRequestDispatcher("profile.jsp").forward(request, response);
             } else {
-                response.sendRedirect("error.jsp");
+                response.sendRedirect("error500.jsp");
             }
 
         } catch (SQLException | IllegalStateException sqle) {

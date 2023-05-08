@@ -120,13 +120,8 @@
                 <table>
                     <tbody>
                         <tr>
-                            <td colspan="3"></td>
-                            <td>Total :</td>
-                            <td><%--=currCart.getTotalValue()--%></td>
                             <td>
-                                <form action="CheckoutServlet">
-                                    <input type="submit" value="Add Record" name="add" class="add">
-                                </form>
+                                <input value="Add Record" type="button" onclick="location.href='healthDeclarationForm.jsp';" />
                             </td>
                         </tr>
                     </tbody>

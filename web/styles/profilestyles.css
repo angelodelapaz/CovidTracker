@@ -63,6 +63,12 @@ img{
 }
 
 /* Main */
+
+.pfp{
+  margin: auto;
+  width: 10%;
+  padding: 10px;
+}
 .main {
   margin-top: 2%;
   font-size: 28px;
@@ -71,7 +77,7 @@ img{
 }
 
 .main h2 {
-  color: #333;
+  color: white;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 24px;
   margin-bottom: 10px;

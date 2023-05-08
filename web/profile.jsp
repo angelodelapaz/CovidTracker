@@ -21,17 +21,16 @@
                 <h1>COVID-19 Tracker</h1>
             </header>
             <ul name="navigation" class="navlist">
-                <li><a href="${pageContext.request.contextPath}/index.jsp" class="navlink">Home</a></li>
-                <li><a href="${pageContext.request.contextPath}/menu.jsp" class="navlink">Health Declaration</a></li>
                 <li><a href="${pageContext.request.contextPath}/profile.jsp" class="navlink">Profile</a></li>
+                <li><a href="${pageContext.request.contextPath}/admin.jsp" class="navlink">Cases</a></li>
+                <li><a href="${pageContext.request.contextPath}/menu.jsp" class="navlink">Health Declaration</a></li>
             </ul> 
         </nav>
     </header>
-    <center>
-    <main>
-        
+<center>
+    <main> 
         <div class="profilepic">
-            <img src="https://www.w3schools.com/howto/img_avatar.png" alt="profile picture">
+            <img class="pfp" src="https://www.w3schools.com/howto/img_avatar.png" alt="profile picture">
         </div>   
         <!-- Main -->
         <div class="main">
@@ -68,10 +67,12 @@
                             </tr>
                         </tbody>
                     </table>
+                    <input value="Add Record" type="button" onclick="location.href = 'healthDeclarationForm.jsp';" />
+
                 </div>
             </div>
         </div>
-        </center>
-    </main>
+</center>
+</main>
 </body>
 </html>
