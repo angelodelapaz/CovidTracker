@@ -1,0 +1,96 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 05 8, 23, 7:30:42 AM
+    Author     : AldrinLuces
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+.table{
+    width: 100%;
+}
+.table_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    background-color: white; 
+}
+.table_header p{
+    color: black;
+}
+.delete{ /**/
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    padding: 10px;
+    color: whitesmoke;
+    background-color: #f80000;
+}
+.add_new{ /**/
+    padding: 10px 20px;
+    color: white;
+    background-color: #eb5e28;
+}
+input{ /**/
+    padding: 10px 20px;
+    margin: 0 10px;
+    outline: none;
+    border: 1px solid green;
+    border-radius: 6px;
+    color: #eb5e28;
+}
+.table_section{
+    height: 650px;
+    overflow: auto;
+}
+table{
+    width: 100%;
+    table-layout: fixed;
+    min-width: 1000px;
+    border-collapse: collapse;
+}
+thead th{
+    position: sticky;
+    top: 0;
+    background-color: green;
+    color: white;
+    font-size: 15px;
+}
+th,td{
+    border-top: 0.5px solid #dddddd;
+    border-bottom: 0.5px solid #dddddd;
+    padding: 10px 20px;
+    word-break: break-all;
+    text-align: center;
+}
+.add{
+    padding: 10px 20px;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+}
+td img{ /**/
+    height: 100px;
+    width: auto;
+}
+tr:hover td{
+    color: darkolivegreen;
+}
+::placeholder{
+    color: #eb5e28;
+}

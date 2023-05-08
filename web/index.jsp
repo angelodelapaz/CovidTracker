@@ -1,3 +1,9 @@
+<%-- 
+    Document   : index
+    Created on : 05 8, 23, 2:23:01 AM
+    Author     : AldrinLuces
+--%>
+
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -6,27 +12,35 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
-            <%@include file="styles/indexstyles.css"%>
+            <%@include file="styles/index1styles.css"%>
         </style>
         <title>Login Page</title>
     </head>
     <body>
-        <div class="center">
-            <h1>Login ka</h1>
-            <form action="LoginServlet" method="post">
-                <div class="txt_field">
-                    <input type="text" name="username" required>
-                    <span></span>
-                    <label>Username</label>
+        <div class="container">
+            <div class="login">
+                <div class="content">
+                    <img src="images/ManilaResidences2.png"/>
                 </div>
-                <div class="txt_field">
-                    <input type="password" name="password" required>
-                    <span></span>
-                    <label>Password</label>
+                <div class="loginForm">
+                    <h1>COVID-19 Tracker Login</h1>
+                    <form action="LoginServlet" method="post">
+                        <div class="txt_field">
+                            <input type="text" name="username" required>
+                            <span></span>
+                            <label>Username</label>
+                        </div>
+                        <div class="txt_field">
+                            <input type="password" name="password" required>
+                            <span></span>
+                            <label>Password</label>
+                        </div>
+                        <!--<button class="btn">Login</button>-->
+                        <input type="submit" class="btn" value="Login">
+                    </form>
+                    <br>
                 </div>
-                <input type="submit" class="login" value="Login">
-            </form>
-            <br>
+            </div>
         </div>
     </body>
 </html>
