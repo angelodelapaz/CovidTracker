@@ -28,10 +28,9 @@
         </nav>
     </header>
     <center>
-    <main>
-        
+    <main> 
         <div class="profilepic">
-            <img src="https://www.w3schools.com/howto/img_avatar.png" alt="profile picture">
+            <img class="pfp" src="https://www.w3schools.com/howto/img_avatar.png" alt="profile picture">
         </div>   
         <!-- Main -->
         <div class="main">

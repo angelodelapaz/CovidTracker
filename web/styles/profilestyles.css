@@ -63,6 +63,12 @@ img{
 }
 
 /* Main */
+
+.pfp{
+  margin: auto;
+  width: 10%;
+  padding: 10px;
+}
 .main {
   margin-top: 2%;
   font-size: 28px;
