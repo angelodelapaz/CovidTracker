@@ -19,7 +19,7 @@
             <div class="table_header">
                 <img src="images/Manila Residences1.png" height="80">
                 <p>COVID-19 Tracker</p>
-                
+
             </div>
             <div class="table_section">
                 <table>
@@ -120,13 +120,8 @@
                 <table>
                     <tbody>
                         <tr>
-                            <td colspan="3"></td>
-                            <td>Total :</td>
-                            <td><%--=currCart.getTotalValue()--%></td>
                             <td>
-                                <form action="CheckoutServlet">
-                                    <input type="submit" value="Add Record" name="add" class="add">
-                                </form>
+                                <input class="button" value="Add Record" type="button" onclick="location.href='healthDeclarationForm.jsp';" />
                             </td>
                         </tr>
                     </tbody>

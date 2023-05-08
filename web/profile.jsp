@@ -21,9 +21,9 @@
                 <h1>COVID-19 Tracker</h1>
             </header>
             <ul name="navigation" class="navlist">
-                <li><a href="${pageContext.request.contextPath}/index.jsp" class="navlink">Home</a></li>
+                 <li><a href="${pageContext.request.contextPath}/profile.jsp" class="navlink">Profile</a></li>
+                <li><a href="${pageContext.request.contextPath}/admin.jsp" class="navlink">Cases</a></li>
                 <li><a href="${pageContext.request.contextPath}/menu.jsp" class="navlink">Health Declaration</a></li>
-                <li><a href="${pageContext.request.contextPath}/profile.jsp" class="navlink">Profile</a></li>
             </ul> 
         </nav>
     </header>
