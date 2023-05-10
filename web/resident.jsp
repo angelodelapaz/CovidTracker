@@ -13,14 +13,25 @@
         <title>Resident Tracker Page</title>
         <link href="styles/residentstyles.css" rel="stylesheet" type="text/css"/>
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <div class="table">
-            <div class="table_header">
-                <img src="images/Manila Residences1.png" height="80">
-                <p>COVID-19 Tracker</p>
-                
-            </div>
+            <header>
+                <img src="images/ManilaResidences3.png" height="80" class="logo">
+                <nav>
+                    <input type="checkbox" id="check">
+                    <label for="check" class="checkbtn">
+                        <i class="fas fa-bars"></i>
+                    </label>
+                    <ul>
+                        <li><a href="/CovidTracker/profile.jsp">Profile</a></li>
+                        <li><a class="active" href="/CovidTracker/resident.jsp">Cases</a></li>
+                        <li><a href="/CovidTracker/healthDeclarationForm.jsp">Health Declaration</a></li>
+                        <li><a href="/CovidTracker/index.jsp">Logout</a></li>
+                    </ul>
+                </nav>
+            </header>
             <div class="table_section">
                 <table>
                     <thead>
@@ -30,7 +41,6 @@
                             <th>Sex</th>
                             <th>Address</th>
                             <th>Status</th>
-                            <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -40,9 +50,6 @@
                             <td>M</td>
                             <td>Block 1 Lot 1, Pitaklan Street</td>
                             <td>Positive</td>
-                            <td>
-                                <button class="delete"><i class="fa-solid fa-trash"></i></button>
-                            </td>
                         </tr>
                         <tr>
                             <td>Angelo Dela Paz</td>
@@ -50,9 +57,6 @@
                             <td>M</td>
                             <td>Block 12 Lot 4, Mimi Street</td>
                             <td>Asymptomatic</td>
-                            <td>
-                                <button class="delete"><i class="fa-solid fa-trash"></i></button>
-                            </td>
                         </tr>
                         <tr>
                             <td>Levin Sta. Cruz</td>
@@ -60,9 +64,6 @@
                             <td>M</td>
                             <td>Block 5 Lot 8, Tete Street</td>
                             <td>Positive</td>
-                            <td>
-                                <button class="delete"><i class="fa-solid fa-trash"></i></button>
-                            </td>
                         </tr>
                         <tr>
                             <td>Taylor Swift</td>
@@ -70,9 +71,6 @@
                             <td>F</td>
                             <td>Block 10 Lot 2, Cornelia Street</td>
                             <td>Negative</td>
-                            <td>
-                                <button class="delete"><i class="fa-solid fa-trash"></i></button>
-                            </td>
                         </tr>
                         <tr>
                             <td>Miley Cyrus</td>
@@ -80,9 +78,6 @@
                             <td>F</td>
                             <td>Block 6 Lot 9, Wrecking Street</td>
                             <td>Negative</td>
-                            <td>
-                                <button class="delete"><i class="fa-solid fa-trash"></i></button>
-                            </td>
                         </tr>
                         <tr>
                             <td>Bruno Mars</td>
@@ -90,9 +85,6 @@
                             <td>M</td>
                             <td>Block 32 Lot 11, Versace Street</td>
                             <td>Asymptomatic</td>
-                            <td>
-                                <button class="delete"><i class="fa-solid fa-trash"></i></button>
-                            </td>
                         </tr>
                         <%--
                             if (!itemList.isEmpty()) {
@@ -121,7 +113,7 @@
                     <tbody>
                         <tr>
                             <td>
-                                <input value="Add Record" type="button" onclick="location.href='healthDeclarationForm.jsp';" />
+                                <input class="button" value="Add Record" type="button" onclick="location.href = 'healthDeclarationForm.jsp';" />
                             </td>
                         </tr>
                     </tbody>

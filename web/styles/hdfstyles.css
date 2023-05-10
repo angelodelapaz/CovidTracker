@@ -7,25 +7,110 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
     Author     : levinjacob
 */
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+nav{
+    background: black;
+    height: 80px;
+    width: 100%;
+}
+nav ul{
+    float: right;
+    margin: 0 20px 0 0;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+a.active,a:hover{
+    background: green;
+    transition: 0.5s;
+}
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+@media (max-width: 952px){
+    nav ul li a{
+         font-size: 16px;
+    }
+}
+@media (max-width: 858px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: green;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    a:hover,a.active{
+        background: none;
+        color: black;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+}
+
+header{
+    display: flex;
+    align-items: center;
+    background-color: black; 
+}
+
 body{
     background-color: rgb(9, 141, 42);
 }
 /* Styling for the main container */
+
 .main-box {
     max-width: 800px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 20px 20px;
     font-family: helvetica;
-    border-radius: 22px;
     background: #ffffff;
-    box-shadow:  10px 10px 5px 5px #2d2e2d;
-    z-index: 2;
 }
 
 .main-box p{
     font-weight: bold;
 }
 /* Styling for the top box */
+
 .top-box {
     text-align: center;
     background-color: #333;
@@ -35,17 +120,20 @@ body{
 }
 
 /* Styling for the form labels */
+
 label {
     display: inline-block;
     margin-bottom: 5px;
 }
 
 /* Styling for the radio buttons and their labels */
+
 input[type="radio"] {
     margin-right: 5px;
 }
 
 /* Styling for the form inputs */
+
 input[type="text"],
 input[type="number"],
 input[type="date"] {
@@ -58,16 +146,19 @@ input[type="date"] {
 }
 
 /* Styling for the Symptoms section */
+
 .symptoms {
     margin-top: 20px;
 }
 
 /* Styling for the Symptoms section labels */
+
 .symptoms p {
     font-weight: bold;
 }
 
 /* Styling for the Submit button */
+
 input[type="submit"] {
     background-color: #333;
     color: #fff;
@@ -78,6 +169,7 @@ input[type="submit"] {
 }
 
 /* Styling for the Submit button on hover */
+
 input[type="submit"]:hover {
     background-color: #555;
 }

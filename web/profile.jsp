@@ -6,38 +6,39 @@
         <meta http-equiv="Content-Type" content="img/jpeg; charset=UTF-8">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="styles/profilestyles.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <!--<link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@700&family=Lexend+Deca&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@700&family=Lexend+Deca&display=swap" rel="stylesheet">-->
+        <link href="styles/profilestyles.css" rel="stylesheet" type="text/css"/>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet">
+        <title>Profile Page</title>
     </head>
-    <title>Profile Page</title>
-</head>
-<body>
-    <header>
-        <nav class="navbar"> 
-            <header>
-                <h1>COVID-19 Tracker</h1>
-            </header>
-            <ul name="navigation" class="navlist">
-                <li><a href="${pageContext.request.contextPath}/profile.jsp" class="navlink">Profile</a></li>
-                <li><a href="${pageContext.request.contextPath}/admin.jsp" class="navlink">Cases</a></li>
-                <li><a href="${pageContext.request.contextPath}/menu.jsp" class="navlink">Health Declaration</a></li>
-            </ul> 
-        </nav>
-    </header>
-<center>
-    <main> 
-        <div class="profilepic">
-            <img class="pfp" src="https://www.w3schools.com/howto/img_avatar.png" alt="profile picture">
-        </div>   
-        <!-- Main -->
-        <div class="main">
-            <h2>Personal Information</h2>
-            <div class="card">
-                <div class="card-body">
-                    <i class="fa fa-pen fa-xs edit"></i>
+    <body>
+        <header>
+            <img src="images/ManilaResidences3.png" height="80" class="logo">
+            <nav>
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                    <i class="fas fa-bars"></i>
+                </label>
+                <ul>
+                    <li><a class="active" href="/CovidTracker/profile.jsp">Profile</a></li>
+                    <li><a href="/CovidTracker/resident.jsp">Cases</a></li>
+                    <li><a href="/CovidTracker/healthDeclarationForm.jsp">Health Declaration</a></li>
+                    <li><a href="/CovidTracker/index.jsp">Logout</a></li>
+                </ul>
+            </nav>
+        </header>
+    <center>
+        <main> 
+            <div class="profilepic">
+                <img class="pfp" src="https://www.w3schools.com/howto/img_avatar.png" alt="profile picture">
+            </div>   
+            <!-- Main -->
+            <div class="main">
+                <h2>Personal Information</h2>
+                <div class="card">
                     <table>
                         <tbody>
                             <tr>
@@ -71,8 +72,7 @@
 
                 </div>
             </div>
-        </div>
-</center>
+    </center>
 </main>
 </body>
 </html>

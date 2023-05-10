@@ -11,8 +11,24 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Health Declaration Form</title>
         <link href="styles/hdfstyles.css" rel="stylesheet" type="text/css"/>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet">
     </head>
     <body>
+        <header>
+            <img src="images/ManilaResidences3.png" height="80" class="logo">
+            <nav>
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                    <i class="fas fa-bars"></i>
+                </label>
+                <ul>
+                    <li><a href="/CovidTracker/profile.jsp">Profile</a></li>
+                    <li><a href="/CovidTracker/resident.jsp">Cases</a></li>
+                    <li><a class="active" href="/CovidTracker/healthDeclarationForm.jsp">Health Declaration</a></li>
+                    <li><a href="/CovidTracker/index.jsp">Logout</a></li>
+                </ul>
+            </nav>
+        </header>
         <div class="main-box">
             <div class="top-box">
                 <p>Health Declaration Checklist Form</p>

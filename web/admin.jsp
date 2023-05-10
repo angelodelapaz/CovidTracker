@@ -13,14 +13,25 @@
         <title>Admin Tracker Page</title>
         <link href="styles/adminstyles.css" rel="stylesheet" type="text/css"/>
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <div class="table">
-            <div class="table_header">
-                <img src="images/Manila Residences1.png" height="80">
-                <p>COVID-19 Tracker</p>
-
-            </div>
+            <header>
+                <img src="images/ManilaResidences3.png" height="80" class="logo">
+                <nav>
+                    <input type="checkbox" id="check">
+                    <label for="check" class="checkbtn">
+                        <i class="fas fa-bars"></i>
+                    </label>
+                    <ul>
+                        <li><a href="/CovidTracker/profile.jsp">Profile</a></li>
+                        <li><a class="active" href="/CovidTracker/admin.jsp">Cases</a></li>
+                        <li><a href="/CovidTracker/healthDeclarationForm.jsp">Health Declaration</a></li>
+                        <li><a href="/CovidTracker/index.jsp">Logout</a></li>
+                    </ul>
+                </nav>
+            </header>
             <div class="table_section">
                 <table>
                     <thead>
@@ -121,7 +132,7 @@
                     <tbody>
                         <tr>
                             <td>
-                                <input class="button" value="Add Record" type="button" onclick="location.href='healthDeclarationForm.jsp';" />
+                                <input class="button" value="Add Record" type="button" onclick="location.href = 'healthDeclarationForm.jsp';" />
                             </td>
                         </tr>
                     </tbody>
