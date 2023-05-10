@@ -108,17 +108,6 @@
                     </tbody>
                 </table>
             </div>
-            <div>
-                <table>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <input class="button" value="Add Record" type="button" onclick="location.href = 'healthDeclarationForm.jsp';" />
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
         </div>
     </body>
 </html>
