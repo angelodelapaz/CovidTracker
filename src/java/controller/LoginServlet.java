@@ -8,7 +8,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
 public class LoginServlet extends HttpServlet {
 
     Connection con;
@@ -17,7 +16,6 @@ public class LoginServlet extends HttpServlet {
     PreparedStatement ps;
     int errorctr = 3;
 
-    
     @Override
     public void init(ServletConfig config) throws ServletException {
         try {
@@ -25,13 +23,13 @@ public class LoginServlet extends HttpServlet {
             String username = config.getInitParameter("dbUserName");
             String password = config.getInitParameter("dbPassword");
             StringBuffer url = new StringBuffer(config.getInitParameter("jdbcDriverURL"))
-                            .append("://")
-                            .append(config.getInitParameter("dbHostName"))
-                            .append(":")
-                            .append(config.getInitParameter("dbPort"))
-                            .append("/")
-                            .append(config.getInitParameter("databaseName"));
-            
+                    .append("://")
+                    .append(config.getInitParameter("dbHostName"))
+                    .append(":")
+                    .append(config.getInitParameter("dbPort"))
+                    .append("/")
+                    .append(config.getInitParameter("databaseName"));
+
             con = DriverManager.getConnection(url.toString(), username, password);
 
         } catch (SQLException sqle) {
@@ -45,7 +43,7 @@ public class LoginServlet extends HttpServlet {
                     + ne.getMessage());
         }
 
-    }  
+    }
 
     public boolean checkCorrect(HttpServletRequest request) throws SQLException {
         boolean isCorrect = true;
@@ -61,7 +59,7 @@ public class LoginServlet extends HttpServlet {
         }
         if (email == null || email.equals("")) {
             isCorrect = false;
-        } 
+        }
         return isCorrect;
     }
 
@@ -89,9 +87,10 @@ public class LoginServlet extends HttpServlet {
                         response.sendRedirect("error500.jsp");
                     }
                 }
-                
-                stmt = con.createStatement();
-                rs = stmt.executeQuery("SELECT * FROM covidtracker ORDER BY Username");
+
+                ps = con.prepareStatement("SELECT * FROM covidtracker WHERE Username = ?");
+                ps.setString(1, request.getParameter("username"));
+                rs = ps.executeQuery();
                 request.setAttribute("records", rs);
                 request.getRequestDispatcher("profile.jsp").forward(request, response);
             } else {
@@ -99,11 +98,12 @@ public class LoginServlet extends HttpServlet {
             }
 
         } catch (SQLException | IllegalStateException sqle) {
+            response.sendRedirect("error500.jsp");
             sqle.printStackTrace();
         }
 
     }
-    
+
     @Override
     public void destroy() {
         try {

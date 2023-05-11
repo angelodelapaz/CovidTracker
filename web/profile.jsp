@@ -1,4 +1,5 @@
-
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ page import="java.sql.*" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -6,10 +7,6 @@
         <meta http-equiv="Content-Type" content="img/jpeg; charset=UTF-8">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!--<link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@700&family=Lexend+Deca&display=swap" rel="stylesheet">-->
         <link href="styles/profilestyles.css" rel="stylesheet" type="text/css"/>
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet">
         <title>Profile Page</title>
@@ -41,30 +38,34 @@
                 <div class="card">
                     <table>
                         <tbody>
+                            <%
+                                ResultSet results = (ResultSet) request.getAttribute("records");
+                                while (results.next()) {%>
                             <tr>
                                 <td>Name</td>
                                 <td>:</td>
-                                <td>Insert Scriplet</td>
+                                <td><%=results.getString("Name")%></td>
                             </tr>
                             <tr>
                                 <td>Email</td>
                                 <td>:</td>
-                                <td>Insert Scriplet</td>
+                                <td><%=results.getString("Username")%></td>
                             </tr>
                             <tr>
                                 <td>Address</td>
                                 <td>:</td>
-                                <td>Insert Scriplet</td>
+                                <td><%=results.getString("Address")%></td>
                             </tr>
                             <tr>
                                 <td>Birthday</td>
                                 <td>:</td>
-                                <td>Insert Scriplet</td>
+                                <td><%=results.getString("Birthday")%></td>
                             </tr>
                             <tr>
                                 <td>Occupation</td>
                                 <td>:</td>
-                                <td>Insert Scriplet</td>
+                                <td><%=results.getString("Password")%></td>
+                                <%	}%>
                             </tr>
                         </tbody>
                     </table>
