@@ -49,7 +49,7 @@
                             <tr>
                                 <td>Email</td>
                                 <td>:</td>
-                                <td><%=results.getString("Username")%></td>
+                                <td><%=results.getString("Email")%></td>
                             </tr>
                             <tr>
                                 <td>Address</td>
@@ -64,10 +64,10 @@
                             <tr>
                                 <td>Occupation</td>
                                 <td>:</td>
-                                <td><%=results.getString("Password")%></td>
-                                <%	}%>
+                                <td><%=results.getString("Occupation")%></td>
                             </tr>
                         </tbody>
+                         <%	}%>
                     </table>
                     <input value="Add Record" type="button" onclick="location.href = 'healthDeclarationForm.jsp';" />
 
