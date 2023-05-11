@@ -18,7 +18,7 @@
             <h2>Oops! <span>Page not found.</span></h2>
             <h1>404</h1>
             <p>We can't find the page you're looking for.</p>
-            <a href="#">Return</a>
+            <a href="javascript:history.back()">Return</a>
         </div>
     </body>
 </html>

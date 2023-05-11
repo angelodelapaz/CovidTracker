@@ -18,7 +18,7 @@
             <h2>Oops! <span>Internal server error.</span></h2>
             <h1>500</h1>
             <p>It seems like something has gone wrong on the website's server.</p>
-            <a href="#">Return</a>
+            <a href="javascript:history.back()">Return</a>
         </div>
     </body>
 </html>

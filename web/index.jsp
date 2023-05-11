@@ -1,10 +1,3 @@
-<%-- 
-    Document   : index
-    Created on : 05 8, 23, 2:23:01 AM
-    Author     : AldrinLuces
---%>
-
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -34,7 +27,6 @@
                             <span></span>
                             <label>Password</label>
                         </div>
-                        <!--<button class="btn">Login</button>-->
                         <input type="submit" class="btn" value="Login">
                     </form>
                     <br>

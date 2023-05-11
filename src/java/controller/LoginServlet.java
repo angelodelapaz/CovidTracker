@@ -94,12 +94,13 @@ public class LoginServlet extends HttpServlet {
                 request.setAttribute("records", rs);
                 request.getRequestDispatcher("profile.jsp").forward(request, response);
             } else {
+                System.out.print("lul");
                 response.sendRedirect("error500.jsp");
             }
 
         } catch (SQLException | IllegalStateException sqle) {
-            response.sendRedirect("error500.jsp");
             sqle.printStackTrace();
+            response.sendRedirect("error500.jsp");
         }
 
     }
