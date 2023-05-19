@@ -46,22 +46,13 @@ public class LoginServlet extends HttpServlet {
     }
 
     public boolean checkCorrect(HttpServletRequest request) throws SQLException {
-        boolean isCorrect = true;
-        String query = "SELECT * FROM covidtracker WHERE Username = ? AND Password = ?";
-        String passw = request.getParameter("password");
-        ps = con.prepareStatement(query);
-        ps.setString(1, request.getParameter("username"));
-        ps.setString(2, passw);
-        ResultSet rs = ps.executeQuery();
-        String email = "";
-        while (rs.next()) {
-            email = rs.getString("username").trim();
-        }
-        if (email == null || email.equals("")) {
-            isCorrect = false;
-        }
-        return isCorrect;
-    }
+    String query = "SELECT * FROM covidtracker WHERE Username = ? AND Password = ?";
+    ps = con.prepareStatement(query);
+    ps.setString(1, request.getParameter("username"));
+    ps.setString(2, request.getParameter("password"));
+    ResultSet rs = ps.executeQuery();
+    return rs.next();
+}
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
