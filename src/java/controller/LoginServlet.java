@@ -73,7 +73,7 @@ public class LoginServlet extends HttpServlet {
                 ps.setString(1, request.getParameter("username"));
                 rs = ps.executeQuery();
                 request.setAttribute("records", rs);
-                request.getRequestDispatcher("profile.jsp").forward(request, response);
+                request.getRequestDispatcher("profile.jsp").forward(request, response); //Proceeds to profile page for successful logins
             } else {
                 response.sendRedirect("error500.jsp");
             }

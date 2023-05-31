@@ -16,7 +16,7 @@
                 </div>
                 <div class="loginForm">
                     <h1>COVID-19 Tracker Login</h1>
-                    <form action="LoginServlet" method="post">
+                    <form action="LoginServlet" method="post"> <!-- forwards login credentials to login servlet for verification on database !-->
                         <div class="txt_field">
                             <input type="text" name="username" required>
                             <span></span>
