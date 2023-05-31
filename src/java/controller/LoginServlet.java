@@ -7,6 +7,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 public class LoginServlet extends HttpServlet {
 
@@ -17,7 +18,7 @@ public class LoginServlet extends HttpServlet {
     int errorctr = 3;
 
     @Override
-    public void init(ServletConfig config) throws ServletException {
+    public void init(ServletConfig config) throws ServletException { //initializes Database connection with Web.xml parameters
         try {
             Class.forName(config.getInitParameter("jdbcClassName"));
             String username = config.getInitParameter("dbUserName");
@@ -45,39 +46,28 @@ public class LoginServlet extends HttpServlet {
 
     }
 
-    public boolean checkCorrect(HttpServletRequest request) throws SQLException {
-    String query = "SELECT * FROM covidtracker WHERE Username = ? AND Password = ?";
-    ps = con.prepareStatement(query);
-    ps.setString(1, request.getParameter("username"));
-    ps.setString(2, request.getParameter("password"));
-    ResultSet rs = ps.executeQuery();
-    return rs.next();
-}
+    public boolean checkCorrect(HttpServletRequest request) throws SQLException { //checks from database for request parameter username and password then returns boolean
+        String query = "SELECT * FROM covidtracker WHERE Username = ? AND Password = ?";
+        ps = con.prepareStatement(query);
+        ps.setString(1, request.getParameter("username"));
+        ps.setString(2, request.getParameter("password"));
+        ResultSet rs = ps.executeQuery();
+        return rs.next();
+    }
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         boolean isCorrect = false;
-        /*try {
-            Captcha captcha = (Captcha) request.getSession().getAttribute(Captcha.NAME); 
-            String answer = request.getParameter("answer");
-            if (!captcha.isCorrect(answer)) {
-                response.sendRedirect("failedlogin.jsp");
-            }  
-        } catch (NullPointerException ne) {
-            ne.printStackTrace();
-        } */
-        errorctr--;
         try {
             if (con != null) {
                 isCorrect = checkCorrect(request);
 
                 if (isCorrect != true) {
-                    if (errorctr == 0) {
-                        response.sendRedirect("error500.jsp");
-                    } else {
-                        response.sendRedirect("error500.jsp");
-                    }
+                    response.sendRedirect("error500.jsp");
                 }
+
+                HttpSession session = request.getSession(true); // creates a new session if one doesn't exist
+                session.setAttribute("username", request.getParameter("username")); // store relevant user information in the session
 
                 ps = con.prepareStatement("SELECT * FROM covidtracker WHERE Username = ?");
                 ps.setString(1, request.getParameter("username"));
@@ -85,7 +75,6 @@ public class LoginServlet extends HttpServlet {
                 request.setAttribute("records", rs);
                 request.getRequestDispatcher("profile.jsp").forward(request, response);
             } else {
-                System.out.print("lul");
                 response.sendRedirect("error500.jsp");
             }
 

@@ -39,7 +39,7 @@
                     <table>
                         <tbody>
                             <%
-                                ResultSet results = (ResultSet) request.getAttribute("records");
+                                ResultSet results = (ResultSet) request.getAttribute("records"); //retrieves resultset of user details of who recently logged in
                                 while (results.next()) {%>
                             <tr>
                                 <td>Name</td>

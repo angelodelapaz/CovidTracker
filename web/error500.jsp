@@ -1,9 +1,3 @@
-<%-- 
-    Document   : error500
-    Created on : 04 27, 23, 8:03:13 PM
-    Author     : AldrinLuces
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
