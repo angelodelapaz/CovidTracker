@@ -33,7 +33,7 @@
             <div class="top-box">
                 <p>Health Declaration Checklist Form</p>
             </div>
-
+            <form action="LoginServlet" method="POST">
             <div class="purpose-of-visit">
                 <p>Purpose of Visit:</p>
                 <input type="radio" id="official" name="offical" checked>
@@ -57,9 +57,9 @@
 
                 <div>
                     <p>a. Fever</p>
-                    <input type="radio" name="fever" id="yes-fever">
+                    <input type="radio" name="fever" id="yes-fever" value="Yes">
                     <label for="yes-fever">YES</label>
-                    <input type="radio" name="fever" id="no-fever" checked>
+                    <input type="radio" name="fever" id="no-fever" value="No" checked>
                     <label for="no-fever">NO</label>
                     <p>if yes, date started:</p>
                     <input type="date" name="date-fever" id="date-fever">
@@ -67,9 +67,9 @@
 
                 <div>
                     <p>b. Cough</p>
-                    <input type="radio" name="cough" id="yes-cough">
+                    <input type="radio" name="cough" id="yes-cough" value="Yes">
                     <label for="yes-cough">YES</label>
-                    <input type="radio" name="cough" id="no-cough" checked>
+                    <input type="radio" name="cough" id="no-cough" value="No" checked>
                     <label for="no-cough">NO</label>
                     <p>if yes, date started:</p>
                     <input type="date" name="date-cough" id="date-cough">
@@ -77,9 +77,9 @@
 
                 <div>
                     <p>c. Colds</p>
-                    <input type="radio" name="colds" id="yes-colds">
+                    <input type="radio" name="colds" id="yes-colds" value="Yes">
                     <label for="yes-colds">YES</label>
-                    <input type="radio" name="colds" id="no-colds" checked>
+                    <input type="radio" name="colds" id="no-colds" value="No" checked>
                     <label for="no-colds">NO</label>
                     <p>if yes, date started:</p>
                     <input type="date" name="date-colds" id="date-colds">
@@ -87,9 +87,9 @@
 
                 <div>
                     <p>d. Muscle & Joint Pains + Fever</p>
-                    <input type="radio" name="painFever" id="yes-painFever">
+                    <input type="radio" name="painFever" id="yes-painFever" value="Yes">
                     <label for="yes-painFever">YES</label>
-                    <input type="radio" name="painFever" id="no-painFever" checked>
+                    <input type="radio" name="painFever" id="no-painFever" value="No" checked>
                     <label for="no-painFever">NO</label>
                     <p>if yes, date started:</p>
                     <input type="date" name="date-painFever" id="date-painFever">
@@ -97,9 +97,9 @@
 
                 <div>
                     <p>e. Throat Pain</p>
-                    <input type="radio" name="throatPain" id="yes-throatPain">
+                    <input type="radio" name="throatPain" id="yes-throatPain" value="Yes">
                     <label for="yes-throatPain">YES</label>
-                    <input type="radio" name="throatPain" id="no-throatPain" checked>
+                    <input type="radio" name="throatPain" id="no-throatPain" value="No" checked>
                     <label for="no-throatPain">NO</label>
                     <p>if yes, date started:</p>
                     <input type="date" name="date-throatPain" id="date-throatPain">
@@ -107,9 +107,9 @@
 
                 <div>
                     <p>f. Shortness of Breath</p>
-                    <input type="radio" name="shortBreath" id="yes-shortBreath">
+                    <input type="radio" name="shortBreath" id="yes-shortBreath" value="Yes">
                     <label for="yes-shortBreath">YES</label>
-                    <input type="radio" name="shortBreath" id="no-shortBreath" checked>
+                    <input type="radio" name="shortBreath" id="no-shortBreath" value="No" checked>
                     <label for="no-shortBreath">NO</label>
                     <p>if yes, date started:</p>
                     <input type="date" name="date-shortBreath" id="date-shortBreath">
@@ -117,9 +117,9 @@
 
                 <div>
                     <p>g. Difficulty Breathing</p>
-                    <input type="radio" name="diffBreath" id="yes-diffBreath">
+                    <input type="radio" name="diffBreath" id="yes-diffBreath" value="Yes">
                     <label for="yes-diffBreath">YES</label>
-                    <input type="radio" name="diffBreath" id="no-diffBreath" checked>
+                    <input type="radio" name="diffBreath" id="no-diffBreath" value="No" checked>
                     <label for="no-diffBreath">NO</label>
                     <p>if yes, date started:</p>
                     <input type="date" name="date-diffBreath" id="date-diffBreath">
@@ -127,9 +127,9 @@
 
                 <div>
                     <p>h. Diarrhea + Fever</p>
-                    <input type="radio" name="diarrheaFever" id="yes-diarrheaFever">
+                    <input type="radio" name="diarrheaFever" id="yes-diarrheaFever" value="Yes">
                     <label for="yes-cough">YES</label>
-                    <input type="radio" name="diarrheaFever" id="no-diarrheaFever" checked>
+                    <input type="radio" name="diarrheaFever" id="no-diarrheaFever" value="No" checked>
                     <label for="no-diarrheaFever">NO</label>
                     <p>if yes, date started:</p>
                     <input type="date" name="date-diarrheaFever" id="date-diarrheaFever">
@@ -137,9 +137,9 @@
 
                 <div>
                     <p>i. Rash + Fever</p>
-                    <input type="radio" name="rashFever" id="yes-rashFever">
+                    <input type="radio" name="rashFever" id="yes-rashFever" value="Yes">
                     <label for="yes-rashFever">YES</label>
-                    <input type="radio" name="rashFever" id="no-rashFever" checked>
+                    <input type="radio" name="rashFever" id="no-rashFever" value="No" checked>
                     <label for="no-rashFever">NO</label>
                     <p>if yes, date started:</p>
                     <input type="date" name="date-rashFever" id="date-rashFever" checked>
@@ -147,9 +147,9 @@
 
                 <div>
                     <p>j. Loss of Taste</p>
-                    <input type="radio" name="lossTaste" id="yes-lossTaste">
+                    <input type="radio" name="lossTaste" id="yes-lossTaste" value="Yes">
                     <label for="yes-lossTaste">YES</label>
-                    <input type="radio" name="lossTaste" id="no-lossTaste" checked>
+                    <input type="radio" name="lossTaste" id="no-lossTaste" value="No" checked>
                     <label for="no-lossTaste">NO</label>
                     <p>if yes, date started:</p>
                     <input type="date" name="date-lossTaste" id="date-lossTaste">
@@ -157,9 +157,9 @@
 
                 <div>
                     <p>k. Loss of Smell</p>
-                    <input type="radio" name="lossSmell" id="yes-lossSmell">
+                    <input type="radio" name="lossSmell" id="yes-lossSmell" value="Yes">
                     <label for="yes-lossSmell">YES</label>
-                    <input type="radio" name="lossSmell" id="no-lossSmell" checked>
+                    <input type="radio" name="lossSmell" id="no-lossSmell" value="No" checked>
                     <label for="no-lossSmell">NO</label>
                     <p>if yes, date started:</p>
                     <input type="date" name="date-lossSmell" id="date-lossSmell">
@@ -169,27 +169,27 @@
             <div class="contact-sick">
                 <p>2. Have you worked together or stayed in the same close environment of a confirmed COVID-19 case?</p>
                 <p>For Health Care Professionals: Have you worked together or stayed in the same close environment of a confirmed COVID-19 case without wearing proper PPE? </p>
-                <input type="radio" name="contactSick" id="yes-contactSick">
+                <input type="radio" name="contactSick" id="yes-contactSick" value="Yes">
                 <label for="yes-contactSick">YES</label>
-                <input type="radio" name="contactSick" id="no-contactSick" checked>
+                <input type="radio" name="contactSick" id="no-contactSick" value="No" checked>
                 <label for="yes-contactSick">NO</label>
                 <p>if yes, date of close contact</p>
                 <input type="date" name="date-contactSick" id="date-contactSick">
             </div>
             <div class="diagnosis">
                 <p>3. Are you recently diagnosed as a confirmed case of COVID-19 in the last 2 weeks?</p>
-                <input type="radio" name="diagnosis" id="yes-diagnosis">
+                <input type="radio" name="diagnosis" id="yes-diagnosis" value="Yes">
                 <label for="yes-diagnosis">YES</label>
-                <input type="radio" name="diagnosis" id="no-diagnosis" checked>
+                <input type="radio" name="diagnosis" id="no-diagnosis" value="No" checked>
                 <label for="yes-diagnosis">NO</label>
                 <p>if yes, when</p>
                 <input type="date" name="date-diagnosis" id="date-diagnosis">
             </div>
             <div class="international-travel">
-                <p>4. Have you travelled outside the Philippines in the last 2 weeks?</p>
-                <input type="radio" name="intTravel" id="yes-intTravel">
+                <p>4. Have you traveled outside the Philippines in the last 2 weeks?</p>
+                <input type="radio" name="intTravel" id="yes-intTravel" value="Yes">
                 <label for="yes-intTravel">YES</label>
-                <input type="radio" name="intTravel" id="no-intTravel" checked>
+                <input type="radio" name="intTravel" id="no-intTravel" value="No" checked>
                 <label for="yes-diagnosis">NO</label>
                 <p>a. Date of Travel</p>
                 <input type="date" name="date-intTravel" id="date-intTravel">
@@ -197,11 +197,12 @@
                 <input type="date" name="date-arrival" id="date-arrival">
                 <p>c. Country of Travel</p>
                 <input type="text" name="country" id="country">
-
+            </div>
                 <center>
                     <button class="submit" action="submit">Submit</button>
                 </center>
-            </div>
+            </form>
         </div>
+        
     </body>
 </html>

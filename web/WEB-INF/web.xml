@@ -58,13 +58,11 @@
         <!--<init-param>
   		<param-name>databaseName</param-name>
   		<param-value>LoginDB</param-value>
-  	</init-param>-->   
-        
-  	<init-param>
-  		<param-name>databaseName</param-name>
-  		<param-value>covidtracker?useSSL=false</param-value>
-  	</init-param>  
-        
+  	</init-param>-->
+        <init-param>
+            <param-name>databaseName</param-name>
+            <param-value>covidtracker?useSSL=false</param-value>
+        </init-param>
     </servlet>
     <servlet-mapping>
         <servlet-name>LoginServlet</servlet-name>
