@@ -12,33 +12,33 @@
         <servlet-name>LoginServlet</servlet-name>
         <servlet-class>controller.LoginServlet</servlet-class>
         <!--<init-param>
-                <param-name>jdbcClassName</param-name>
-                <param-value>org.apache.derby.jdbc.ClientDriver</param-value>
-        </init-param>-->
+  		<param-name>jdbcClassName</param-name>
+  		<param-value>org.apache.derby.jdbc.ClientDriver</param-value>
+  	</init-param>-->
         <init-param>
             <param-name>jdbcClassName</param-name>
             <param-value>com.mysql.cj.jdbc.Driver</param-value>
         </init-param>
         <!--<init-param>
-                <param-name>dbUserName</param-name>
-                <param-value>app</param-value>
-        </init-param>-->
+  		<param-name>dbUserName</param-name>
+  		<param-value>app</param-value>
+  	</init-param>-->
         <init-param>
             <param-name>dbUserName</param-name>
             <param-value>root</param-value>
         </init-param>
         <!--<init-param>
-                <param-name>dbPassword</param-name>
-                <param-value>app</param-value>
-        </init-param>-->
+  		<param-name>dbPassword</param-name>
+  		<param-value>app</param-value>
+  	</init-param>-->
         <init-param>
             <param-name>dbPassword</param-name>
             <param-value>root</param-value>
         </init-param>
         <!--<init-param>
-                <param-name>jdbcDriverURL</param-name>
-                <param-value>jdbc:derby</param-value>
-        </init-param>-->
+  		<param-name>jdbcDriverURL</param-name>
+  		<param-value>jdbc:derby</param-value>
+  	</init-param>-->
         <init-param>
             <param-name>jdbcDriverURL</param-name>
             <param-value>jdbc:mysql</param-value>
@@ -48,23 +48,17 @@
             <param-value>localhost</param-value>
         </init-param>
         <!--<init-param>
-                <param-name>dbPort</param-name>
-                <param-value>1527</param-value>
-        </init-param>-->
+  		<param-name>dbPort</param-name>
+  		<param-value>1527</param-value>
+  	</init-param>-->
         <init-param>
             <param-name>dbPort</param-name>
             <param-value>3306</param-value>
         </init-param>
         <!--<init-param>
-<<<<<<< Updated upstream
   		<param-name>databaseName</param-name>
   		<param-value>LoginDB</param-value>
   	</init-param>-->
-=======
-                <param-name>databaseName</param-name>
-                <param-value>LoginDB</param-value>
-        </init-param>-->
->>>>>>> Stashed changes
         <init-param>
             <param-name>databaseName</param-name>
             <param-value>covidtracker?useSSL=false</param-value>

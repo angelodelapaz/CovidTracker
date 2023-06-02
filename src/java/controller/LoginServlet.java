@@ -12,6 +12,7 @@ import javax.servlet.http.HttpSession;
 public class LoginServlet extends HttpServlet {
 
     Connection con;
+    Statement stmt;
     ResultSet rs;
     PreparedStatement ps;
     int errorctr = 3;
@@ -64,25 +65,15 @@ public class LoginServlet extends HttpServlet {
                 if (isCorrect != true) {
                     response.sendRedirect("error500.jsp");
                 }
-<<<<<<< Updated upstream
 
                 HttpSession session = request.getSession(true); // creates a new session if one doesn't exist
                 session.setAttribute("username", request.getParameter("username")); // store relevant user information in the session
 
-=======
-                
-                HttpSession session = request.getSession();
->>>>>>> Stashed changes
                 ps = con.prepareStatement("SELECT * FROM covidtracker WHERE Username = ?");
                 ps.setString(1, request.getParameter("username"));
                 rs = ps.executeQuery();
                 request.setAttribute("records", rs);
-<<<<<<< Updated upstream
                 request.getRequestDispatcher("profile.jsp").forward(request, response); //Proceeds to profile page for successful logins
-=======
-                session.setAttribute("record", rs);
-                response.sendRedirect("profile.jsp");
->>>>>>> Stashed changes
             } else {
                 response.sendRedirect("error500.jsp");
             }
@@ -99,6 +90,7 @@ public class LoginServlet extends HttpServlet {
         try {
             rs.close();
             ps.close();
+            stmt.close();
             con.close();
         } catch (SQLException sqle) {
             sqle.printStackTrace();
