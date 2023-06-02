@@ -4,6 +4,7 @@
     Author     : AldrinLuces
 --%>
 
+<%@ page import="java.sql.*" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -37,13 +38,31 @@
                     <thead>
                         <tr>
                             <th>Name</th>
-                            <th>Age</th>
-                            <th>Sex</th>
+                            <th>Birthday</th>
+                            <th>Email</th>
                             <th>Address</th>
+                            <th>Occupation</th>
                             <th>Status</th>
                         </tr>
                     </thead>
                     <tbody>
+                        <% 
+                            ResultSet results = (ResultSet)session.getAttribute("tablerecords");
+                            session.setAttribute("tablerecords", results);
+                            ResultSet result = (ResultSet)session.getAttribute("tablerecords");
+                            while (result.next()){
+                        %>
+                        <tr>
+                        <td><%=results.getString("Name")%></td>
+                        <td><%=results.getString("Birthday")%></td>
+                        <td><%=results.getString("Email")%></td>
+                        <td><%=results.getString("Address")%></td>
+                        <td><%=results.getString("Occupation")%></td>
+                        <td><%=results.getString("Status")%></td>
+                        </tr>
+                        <% } %>
+                                
+                        <!-- comment 
                         <tr>
                             <td>Aldrin Luces</td>
                             <td>20</td>
@@ -85,26 +104,8 @@
                             <td>M</td>
                             <td>Block 32 Lot 11, Versace Street</td>
                             <td>Asymptomatic</td>
-                        </tr>
-                        <%--
-                            if (!itemList.isEmpty()) {
-                                for (item i : itemList) 
-                                {
-                                    int c = itemList.indexOf(i);
-                        %>
-                        <tr>
-                            <td><img src="<%=i.getPicture()%>"></td>
-                            <td><%=i.getName()%></td>
-                            <td>₱<%=i.getPrice()%></td>
-                            <td><%=countList.get(c)%></td>
-                            <td>₱<%=countList.get(c) * i.getPrice()%></td>
-                            <td>
-                                <button class="delete"><i class="fa-solid fa-trash"></i></button>
-                            </td>
-                        </tr>
-                        <%
-                                }
-                            }--%>
+                        </tr> 
+                        -->
                     </tbody>
                 </table>
             </div>

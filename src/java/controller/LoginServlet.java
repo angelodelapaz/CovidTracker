@@ -66,6 +66,9 @@ public class LoginServlet extends HttpServlet {
                 }
 
                 HttpSession session = request.getSession(); // creates a new session if one doesn't exist
+                ps = con.prepareStatement("SELECT * FROM covidtracker ORDER BY Name");
+                rs = ps.executeQuery();
+                session.setAttribute("tablerecords", rs); 
                 ps = con.prepareStatement("SELECT * FROM covidtracker WHERE Username = ?");
                 ps.setString(1, request.getParameter("username"));
                 rs = ps.executeQuery();
