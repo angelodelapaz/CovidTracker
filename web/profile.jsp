@@ -1,6 +1,17 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ page import="java.sql.*" %>
 <!DOCTYPE html>
+
+<%
+    ResultSet results = (ResultSet) session.getAttribute("record");
+    while (results.next()) {
+        session.setAttribute("profilename", results.getString("Name"));
+        session.setAttribute("profileemail", results.getString("Email"));
+        session.setAttribute("profileaddress", results.getString("Address"));
+        session.setAttribute("profilebirthday", results.getString("Birthday"));
+        session.setAttribute("profileoccupation", results.getString("Occupation"));
+        	}
+%>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -38,36 +49,39 @@
                 <div class="card">
                     <table>
                         <tbody>
+<<<<<<< Updated upstream
                             <%
                                 ResultSet results = (ResultSet) request.getAttribute("records"); //retrieves resultset of user details of who recently logged in
                                 while (results.next()) {%>
+=======
+
+>>>>>>> Stashed changes
                             <tr>
                                 <td>Name</td>
                                 <td>:</td>
-                                <td><%=results.getString("Name")%></td>
+                                <td><%=session.getAttribute("profilename")%></td>
                             </tr>
                             <tr>
                                 <td>Email</td>
                                 <td>:</td>
-                                <td><%=results.getString("Email")%></td>
+                                <td><%=session.getAttribute("profileemail")%></td>
                             </tr>
                             <tr>
                                 <td>Address</td>
                                 <td>:</td>
-                                <td><%=results.getString("Address")%></td>
+                                <td><%=session.getAttribute("profileaddress")%></td>
                             </tr>
                             <tr>
                                 <td>Birthday</td>
                                 <td>:</td>
-                                <td><%=results.getString("Birthday")%></td>
+                                <td><%=session.getAttribute("profilebirthday")%></td>
                             </tr>
                             <tr>
                                 <td>Occupation</td>
                                 <td>:</td>
-                                <td><%=results.getString("Occupation")%></td>
+                                <td><%=session.getAttribute("profileoccupation")%></td>
                             </tr>
-                        </tbody>
-                         <%	}%>
+                        </tbody>                
                     </table>
                     <input value="Add Record" type="button" onclick="location.href = 'healthDeclarationForm.jsp';" />
 
