@@ -36,30 +36,35 @@
             <form action="AddRecordServlet" method="POST">
             <div class="purpose-of-visit">
                 <p>Purpose of Visit:</p>
-                <input type="radio" id="official" name="offical" value="yes" checked>
+                <input type="radio" id="official" name="offical"  checked>
                 <label for="official">Official</label>
-                <input type="radio" id="personal" name="personal" value="no">
+                <input type="radio" id="personal" name="personal">
                 <label for="personal">Personal</label>
             </div>
                 
             <div class="name-of-resident">
                 <p>Name:</p>
-                <input type="text" placeholder="Name">
+                <input type="text" name="name" placeholder="Name">
             </div>
                 
             <div class="birthday-of-resident">
                 <p>Birthday:</p>
-                <input type="date">
+                <input type="date" name="bday">
             </div>
                 
             <div class="sex-of-resident">
                 <p>Sex:</p>
-                <input type="text" placeholder="Male or Female">
+                <input type="text" name="sex" placeholder="Male or Female">
             </div>
                 
             <div class="address-of-resident">
                 <p>Address:</p>
-                <input type="text" placeholder="Current Address">
+                <input type="text" name="address" placeholder="Current Address">
+            </div>
+                
+             <div class="occupation-of-resident">
+                <p>Occupation:</p>
+                <input type="text" name="occupation" placeholder="Current Occupation">
             </div>
 
             <div>
