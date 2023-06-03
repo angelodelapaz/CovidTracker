@@ -94,7 +94,8 @@ header{
 }
 
 body{
-    background-color: rgb(9, 141, 42);
+    background: linear-gradient(rgba(4,9,10,0.9),rgba(4,9,10,0.9)), url(https://images.pexels.com/photos/1546168/pexels-photo-1546168.jpeg?cs=srgb&dl=pexels-david-mcbee-1546168.jpg&fm=jpg) no-repeat;
+    background-size: cover;
 }
 /* Styling for the main container */
 

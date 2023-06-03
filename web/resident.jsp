@@ -1,8 +1,3 @@
-<%-- 
-    Document   : resident
-    Created on : 05 8, 23, 6:41:15 AM
-    Author     : AldrinLuces
---%>
 
 <%@ page import="java.sql.*" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

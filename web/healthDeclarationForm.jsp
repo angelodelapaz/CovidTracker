@@ -33,18 +33,33 @@
             <div class="top-box">
                 <p>Health Declaration Checklist Form</p>
             </div>
-            <form action="LoginServlet" method="POST">
+            <form action="AddRecordServlet" method="POST">
             <div class="purpose-of-visit">
                 <p>Purpose of Visit:</p>
-                <input type="radio" id="official" name="offical" checked>
+                <input type="radio" id="official" name="offical" value="yes" checked>
                 <label for="official">Official</label>
-                <input type="radio" id="personal" name="personal">
+                <input type="radio" id="personal" name="personal" value="no">
                 <label for="personal">Personal</label>
             </div>
-
-            <div class="place-of-visit">
-                <p>Place of Visit:</p>
-                <input type="text" value="Manila Residences">
+                
+            <div class="name-of-resident">
+                <p>Name:</p>
+                <input type="text" placeholder="Name">
+            </div>
+                
+            <div class="birthday-of-resident">
+                <p>Birthday:</p>
+                <input type="date">
+            </div>
+                
+            <div class="sex-of-resident">
+                <p>Sex:</p>
+                <input type="text" placeholder="Male or Female">
+            </div>
+                
+            <div class="address-of-resident">
+                <p>Address:</p>
+                <input type="text" placeholder="Current Address">
             </div>
 
             <div>
