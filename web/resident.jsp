@@ -34,7 +34,7 @@
                         <tr>
                             <th>Name</th>
                             <th>Birthday</th>
-                            <th>Email</th>
+                            <th>Sex</th>
                             <th>Address</th>
                             <th>Occupation</th>
                             <th>Status</th>
@@ -50,7 +50,7 @@
                         <tr>
                         <td><%=results.getString("Name")%></td>
                         <td><%=results.getString("Birthday")%></td>
-                        <td><%=results.getString("Email")%></td>
+                        <td><%=results.getString("Sex")%></td>
                         <td><%=results.getString("Address")%></td>
                         <td><%=results.getString("Occupation")%></td>
                         <td><%=results.getString("Status")%></td>

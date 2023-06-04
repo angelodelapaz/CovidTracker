@@ -7,12 +7,13 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 public class AddRecordServlet extends HttpServlet {
    
     Connection conn;
     PreparedStatement ps;
-    
+    ResultSet rs;
     @Override
     public void init(ServletConfig config) throws ServletException { //initializes Database connection with Web.xml parameters
         try {
@@ -47,14 +48,19 @@ public class AddRecordServlet extends HttpServlet {
        if (conn!=null){
            try{
                
-            String query = "INSERT INTO covidtracker (Name, Sex, Address, Occupation) VALUES (?, ?, ?, ?)";
+            String query = "INSERT INTO covidtracker (Name, Birthday, Sex, Address, Occupation, Status) VALUES (?, ?, ?, ?,?, ?)";
             ps = conn.prepareStatement(query); //NAGRERETURN NG NULL VALUE (conn is null)
             ps.setString(1, request.getParameter("name"));
-            //ps.setString(2, bday);
-            ps.setString(2, request.getParameter("sex"));
-            ps.setString(3, request.getParameter("address"));
-            ps.setString(4, request.getParameter("occupation"));
+            ps.setString(2, request.getParameter("bday"));
+            ps.setString(3, request.getParameter("sex"));
+            ps.setString(4, request.getParameter("address"));
+            ps.setString(5, request.getParameter("occupation"));
+            ps.setString(6, request.getParameter("status"));
             ps.executeUpdate();
+            ps = conn.prepareStatement("SELECT * FROM covidtracker ORDER BY Name");
+            rs = ps.executeQuery();
+            HttpSession session = request.getSession(); 
+            session.setAttribute("tablerecords", rs); 
             response.sendRedirect("resident.jsp");
         } catch (SQLException sqle){
             sqle.printStackTrace();

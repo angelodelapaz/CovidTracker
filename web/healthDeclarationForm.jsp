@@ -66,6 +66,11 @@
                 <p>Occupation:</p>
                 <input type="text" name="occupation" placeholder="Current Occupation">
             </div>
+                
+            <div class="status-of-resident">
+                <p>Status:</p>
+                <input type="text" name="status" placeholder="COVID-19 Status">
+            </div>
 
             <div>
                 <p>Temperature (&deg;C):</p>
