@@ -46,10 +46,9 @@ public class AddRecordServlet extends HttpServlet {
             throws ServletException, IOException {
        if (conn!=null){
            try{
-            
-            //NAGRERETURN NG NULL VALUE 
+               
             String query = "INSERT INTO covidtracker (Name, Sex, Address, Occupation) VALUES (?, ?, ?, ?)";
-            ps = conn.prepareStatement(query);
+            ps = conn.prepareStatement(query); //NAGRERETURN NG NULL VALUE (conn is null)
             ps.setString(1, request.getParameter("name"));
             //ps.setString(2, bday);
             ps.setString(2, request.getParameter("sex"));

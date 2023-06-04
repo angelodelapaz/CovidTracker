@@ -4,8 +4,9 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/Gelo/Documents/NetBeansProjects/CovidTracker/CovidTracker/src/java/controller/LoginServlet.java</file>
+            <file>file:/C:/Users/Gelo/Documents/NetBeansProjects/CovidTracker/CovidTracker/src/java/controller/AddRecordServlet.java</file>
             <file>file:/C:/Users/Gelo/Documents/NetBeansProjects/CovidTracker/CovidTracker/web/index.jsp</file>
-            <file>file:/C:/Users/Gelo/Documents/NetBeansProjects/CovidTracker/CovidTracker/web/profile.jsp</file>
+            <file>file:/C:/Users/Gelo/Documents/NetBeansProjects/CovidTracker/CovidTracker/web/healthDeclarationForm.jsp</file>
         </group>
     </open-files>
 </project-private>
